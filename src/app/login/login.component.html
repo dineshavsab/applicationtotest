@@ -6,15 +6,15 @@
         <igx-card-content>
             <igx-input-group>
                 <label igxLabel for="userid" >User Id</label>
-                <input igxInput type="text" name="userid" [(ngModel)]="user.userid">
+                <input igxInput type="text" id="userid" name="userid" data-cy="userid" [(ngModel)]="user.userid">
             </igx-input-group>
             <igx-input-group>
                 <label igxLabel for="password">Password</label>
-                <input igxInput type="password" name="password" [(ngModel)]="user.password" >
+                <input igxInput type="password" id="password" name="password" data-cy="password" [(ngModel)]="user.password" >
             </igx-input-group>
         </igx-card-content>
         <igx-card-footer>
-            <button igxButton="raised" igxRipple type="submit">Submit</button>
+            <button igxButton="raised" igxRipple type="submit" data-cy="submit" >Submit</button>
         </igx-card-footer>
     </igx-card>
 </form>
