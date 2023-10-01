@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'minireset.css/minireset';
+@use "@infragistics/igniteui-angular/theming" as *;
+
+@use './colors' as *;
+@use './variables' as *;
+
+@include core();
+@include typography($font-family: $material-typeface, $type-scale: $material-type-scale);
+
+$custom-palette: palette( $primary: $my-primary, $secondary: $my-secondary, $surface: $my-surface);
+@include theme($palette: $custom-palette, $schema: $my-schema, $roundness: .2);
+
+
+body {
+	background: hsla(var(--ig-surface-500));
+	color: var(--ig-surface-500-contrast);
+}
+html, body {
+  height: 100%;
+  margin: 2;
+}
+
+
+.ig-typography {
+  h1, h2, h3, h4, h5, h6, p, .ig-typography__body-1 {
+    margin: 0;
+  }
+}
+.igx-card-header
+{
+	background: $my-primary;
+}
+.igx-nav-drawer__aside 
+{
+  background: $my-primary;
+  --border-radius : 0;
+}
+.igx-nav-drawer__item, .igx-nav-drawer__item--active {
+  color: $my-surface;
+}
+.igx-nav-drawer__item igx-icon, .igx-nav-drawer__item--active igx-icon {
+  color: $my-surface;
+}
+
+.igx-chip, .igx-chip__ghost, .igx-chip__ghost--compact, .igx-chip__ghost--cosy
+{
+  --border-color: $my-primary;
+}
+
+.ig-typography .igx-button
+{
+  text-transform: none;
+}
+
+.igx-dropdown
+{
+  background: $my-primary;
+}
+.igx-input-group--bootstrap .igx-input-group__upload-button [igxButton]
+{
+  margin: 10px;
+}
+
+.igx-grid-toolbar
+{
+  background-color:  var(--igx-paginator-background-color, hsla(var(--ig-gray-100), var(--ig-gray-a)));
+}  
+
+.igx-input-group--bootstrap .igx-input-group__bundle 
+{
+    background: var(--igx-paginator-background-color, hsla(var(--ig-gray-100), var(--ig-gray-a)));
+}
+
+.igx-dialog__window-title
+{
+  --background: #292a34;
+}
+.outer-wrapper > *:not(router-outlet) {
+  width: 100%;
+}

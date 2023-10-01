@@ -1,0 +1,44 @@
+
+@use "minireset.css/minireset";
+@use "@infragistics/igniteui-angular/theming" as *;
+@use './colors' as *;
+
+$my-schema: $light-material-schema;
+$my-body-1: type-style(
+   $font-size: rem(14px),
+);
+
+$my-type-scale: type-scale(
+    $h1:$my-body-1,
+    $h2:$my-body-1,
+    $h3:$my-body-1,
+    $h4:$my-body-1,
+    $h5:$my-body-1,
+    $h6:$my-body-1,
+    $subtitle-1:$my-body-1,
+    $subtitle-2:$my-body-1,
+
+    $font-size : $my-body-1,
+    $body-1: $my-body-1,
+    $body-2: $my-body-1,
+    $button: $my-body-1,
+    $caption: $my-body-1,
+    $overline: $my-body-1,
+
+);
+
+// $background: $my-secondary,
+$my-card-theme: card-theme(
+    $background: $my-secondary,
+    $header-text-color: $my-header-text-color,
+    $subtitle-text-color: $my-subtitle-text-color,
+    $content-text-color: $my-content-text-color,
+    $outline-color : $my-header-text-color
+    
+);
+
+$my-navdrawer-theme: navdrawer-theme(
+    $background: $my-primary,
+    $item-active-background: $my-surface,
+    $item-header-text-color: $my-header-text-color
+);

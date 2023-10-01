@@ -1,0 +1,15 @@
+@use "minireset.css/minireset";
+@use "@infragistics/igniteui-angular/theming" as *;
+
+$my-schema: $light-material-schema;
+//$my-schema: $dark-bootstrap-schema;
+$my-font-family: "Roboto";
+$my-type-scale: $material-type-scale;
+
+$my-primary: #0E2A76;
+$my-secondary: #41B4D2;
+$my-surface:#E6E0E0;
+$my-header-text-color: white;
+$my-subtitle-text-color : #EDEFEF;
+$my-content-text-color : black;
+
