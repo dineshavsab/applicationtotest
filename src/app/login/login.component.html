@@ -1,4 +1,4 @@
-<form #login="ngForm" autocomplete="off">
+
     <igx-card>
         <igx-card-header>
             <label igxLabel >Login</label> 
@@ -14,8 +14,8 @@
             </igx-input-group>
         </igx-card-content>
         <igx-card-footer>
-            <button igxButton="raised" igxRipple type="submit" data-cy="submit" >Submit</button>
+            <button igxButton="raised" igxRipple type="submit" data-cy="submit" (click)="onSubmit()" >Submit</button>
         </igx-card-footer>
     </igx-card>
-</form>
+
     

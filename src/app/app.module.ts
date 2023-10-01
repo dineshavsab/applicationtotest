@@ -14,12 +14,16 @@ import { IgxAutocompleteModule, IgxAvatarModule, IgxButtonModule, IgxCardModule,
 from '@infragistics/igniteui-angular';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { UnAuthorizedComponent } from './un-authorized/un-authorized.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomepageComponent,
+    UnAuthorizedComponent
   ],
   imports: [
     BrowserModule,

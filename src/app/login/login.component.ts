@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
-
+import { Router } from '@angular/router';
 interface User
 {
     userid: string;
@@ -14,25 +13,23 @@ interface User
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-
-  @ViewChild(NgForm, { static: true })
-    public registrationForm: NgForm;
-
-    public showPassword: boolean = false;
-
-    public user: User = {
+  public user: User = {
         userid: '',
         email: '',
         password: ''
     };
 
-    public get togglePasswordVisibility() {
-      return this.showPassword ? 'visibility_off' : 'visibility';
-  }
+  constructor(private router : Router)
+  {
 
-  public onSubmit() {
-      console.log(this.user);
-      this.registrationForm.reset();
+  }
+  public onSubmit() 
+  {
+    console.log('Current user ', this.user);
+    if(this.user.userid === this.user.password)
+      this.router.navigate(['homepage']);
+    else
+      this.router.navigate(['unauthorized']);
   }
 
 
